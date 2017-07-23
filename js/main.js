@@ -8,7 +8,7 @@ class Person {
   constructor (name, email){
   this.name = name;
   this.email = email;
-  this.userName = email.split('@')[0];
+  this.username = email.split('@')[0];
   }
 }
 
@@ -19,8 +19,8 @@ class Person {
 // use the `super()` command so you don't lose the functionality of the
 // `constructor()` method from the `Person` class.)
 class Student extends Person {
-  constuctor(name, email){
-    //super (name, email);
+  constructor(name, email){
+    super (name, email);
     this.attendance = [];
   }
 // Create another method on the `Student` class called `calculateAttendance`.
@@ -76,7 +76,7 @@ class Course {
     // `updateRoster()`, so it might look like this: `updateRoster(this)`.
   addStudent(){
     let name = prompt('Student Full Name:');
-    let email = prompt('Student Email;')
+    let email = prompt('Student Email:')
     let newStudent = new Student(name,email);
     this.students.push(newStudent);
     updateRoster(this);
@@ -115,7 +115,7 @@ setTeacher(){
     // Now that we have retrieved the specific `Student` object we want
     // to work with, we can use the appropriate method on the `Student` object
     // to record the attendance.
-  markAttendace(userName, status='present'){
+  markAttendance(userName, status='present'){
     let student = this.findStudent(username);
     if (status === 'present') {
       student.attendance.push(1);
