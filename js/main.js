@@ -36,7 +36,8 @@ class Student extends Person {
            counter = counter + mark;
       }
     let attendancePercentage = counter / this.attendance.length * 100;
-    return '${attendancePercentage}%';
+    let displayPercentage = attendancePercentage.toFixed(2);
+    return `${displayPercentage}%`;
       } else {
           return "0%";
       }
@@ -115,7 +116,7 @@ setTeacher(){
     // Now that we have retrieved the specific `Student` object we want
     // to work with, we can use the appropriate method on the `Student` object
     // to record the attendance.
-  markAttendance(userName, status='present'){
+  markAttendance(username, status='present'){
     let student = this.findStudent(username);
     if (status === 'present') {
       student.attendance.push(1);

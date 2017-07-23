@@ -3,6 +3,7 @@
 button {
     background: royalblue;
     padding: 0.2rem;
+    margin: 0.2rem;
     border: 1px rgba(255,255,255,0) solid;
     color: #fff;
     cursor: pointer;
