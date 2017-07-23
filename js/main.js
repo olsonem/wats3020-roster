@@ -30,15 +30,15 @@ class Student extends Person {
 // This should allow attendance percentage to be calculated as the average of
 // all the items in the `attendance` Array.
   calculateAttendance(){
-    if (this.attendance.length > 0){
+    if (this.attendance.length > 0) {
       let counter = 0;
       for (let mark of this.attendance){
-      counter = counter + mark;
+           counter = counter + mark;
       }
-    let attendacnePercentage = counter / this.attendance.length * 100;
-    return '${attendacnePercentage}%';
+    let attendancePercentage = counter / this.attendance.length * 100;
+    return '${attendancePercentage}%';
       } else {
-      return "0%";
+          return "0%";
       }
   }
 }
